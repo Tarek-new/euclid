@@ -1,0 +1,443 @@
+{
+  "counting_basic": {
+    "name": "Counting and Cardinality",
+    "domain": "arithmetic",
+    "grade": 1,
+    "prerequisites": [],
+    "description": "Count objects, understand that the last number said tells how many."
+  },
+  "number_comparison": {
+    "name": "Comparing Numbers",
+    "domain": "arithmetic",
+    "grade": 1,
+    "prerequisites": ["counting_basic"],
+    "description": "Compare two numbers using greater than, less than, equal to."
+  },
+  "place_value_basic": {
+    "name": "Place Value (Ones and Tens)",
+    "domain": "arithmetic",
+    "grade": 1,
+    "prerequisites": ["counting_basic"],
+    "description": "Understand tens and ones. A two-digit number represents amounts of tens and ones."
+  },
+  "addition_basic": {
+    "name": "Addition (Single Digit)",
+    "domain": "arithmetic",
+    "grade": 1,
+    "prerequisites": ["counting_basic"],
+    "description": "Add single-digit numbers. Understand addition as putting together."
+  },
+  "subtraction_basic": {
+    "name": "Subtraction (Single Digit)",
+    "domain": "arithmetic",
+    "grade": 1,
+    "prerequisites": ["addition_basic"],
+    "description": "Subtract single-digit numbers. Understand subtraction as taking apart."
+  },
+  "addition_multidigit": {
+    "name": "Addition (Multi-Digit)",
+    "domain": "arithmetic",
+    "grade": 2,
+    "prerequisites": ["addition_basic", "place_value_basic"],
+    "description": "Add two and three-digit numbers using place value understanding."
+  },
+  "subtraction_multidigit": {
+    "name": "Subtraction (Multi-Digit)",
+    "domain": "arithmetic",
+    "grade": 2,
+    "prerequisites": ["subtraction_basic", "place_value_basic"],
+    "description": "Subtract two and three-digit numbers using place value understanding."
+  },
+  "place_value_advanced": {
+    "name": "Place Value (Hundreds and Beyond)",
+    "domain": "arithmetic",
+    "grade": 2,
+    "prerequisites": ["place_value_basic", "addition_multidigit"],
+    "description": "Understand hundreds, thousands. Read and write numbers to 1000."
+  },
+  "multiplication_basic": {
+    "name": "Multiplication (Basic Facts)",
+    "domain": "arithmetic",
+    "grade": 3,
+    "prerequisites": ["addition_multidigit"],
+    "description": "Multiplication as repeated addition. Fluency with facts 0-10."
+  },
+  "division_basic": {
+    "name": "Division (Basic Facts)",
+    "domain": "arithmetic",
+    "grade": 3,
+    "prerequisites": ["multiplication_basic"],
+    "description": "Division as equal sharing or grouping. Relationship between multiplication and division."
+  },
+  "fractions_concept": {
+    "name": "Fractions (Concept)",
+    "domain": "arithmetic",
+    "grade": 3,
+    "prerequisites": ["division_basic"],
+    "description": "Understand a fraction as part of a whole. Numerator and denominator."
+  },
+  "measurement_basic": {
+    "name": "Measurement (Length, Weight, Time)",
+    "domain": "measurement",
+    "grade": 3,
+    "prerequisites": ["addition_multidigit", "number_comparison"],
+    "description": "Measure lengths, weights. Tell time to the minute. Solve problems involving time intervals."
+  },
+  "multiplication_multidigit": {
+    "name": "Multiplication (Multi-Digit)",
+    "domain": "arithmetic",
+    "grade": 4,
+    "prerequisites": ["multiplication_basic", "place_value_advanced"],
+    "description": "Multiply up to four-digit numbers by one-digit numbers. Multiply two two-digit numbers."
+  },
+  "division_multidigit": {
+    "name": "Division (Multi-Digit)",
+    "domain": "arithmetic",
+    "grade": 4,
+    "prerequisites": ["division_basic", "multiplication_multidigit"],
+    "description": "Divide up to four-digit dividends by one-digit divisors. Interpret remainders."
+  },
+  "fractions_equivalence": {
+    "name": "Fraction Equivalence and Ordering",
+    "domain": "arithmetic",
+    "grade": 4,
+    "prerequisites": ["fractions_concept", "multiplication_basic"],
+    "description": "Explain why fractions are equivalent. Compare fractions with different numerators and denominators."
+  },
+  "fractions_addition": {
+    "name": "Fraction Addition and Subtraction",
+    "domain": "arithmetic",
+    "grade": 4,
+    "prerequisites": ["fractions_equivalence", "addition_multidigit"],
+    "description": "Add and subtract fractions with like and unlike denominators."
+  },
+  "geometry_basic": {
+    "name": "Geometry (Shapes and Properties)",
+    "domain": "geometry",
+    "grade": 4,
+    "prerequisites": ["measurement_basic"],
+    "description": "Classify shapes by properties of their lines and angles."
+  },
+  "decimals_concept": {
+    "name": "Decimals (Concept)",
+    "domain": "arithmetic",
+    "grade": 4,
+    "prerequisites": ["fractions_equivalence", "place_value_advanced"],
+    "description": "Understand decimal notation for fractions with denominators 10 or 100."
+  },
+  "fractions_multiplication": {
+    "name": "Fraction Multiplication and Division",
+    "domain": "arithmetic",
+    "grade": 5,
+    "prerequisites": ["fractions_addition", "multiplication_multidigit"],
+    "description": "Multiply and divide fractions and mixed numbers."
+  },
+  "decimals_operations": {
+    "name": "Decimal Operations",
+    "domain": "arithmetic",
+    "grade": 5,
+    "prerequisites": ["decimals_concept", "multiplication_multidigit"],
+    "description": "Add, subtract, multiply and divide decimals to hundredths."
+  },
+  "volume_concept": {
+    "name": "Volume",
+    "domain": "measurement",
+    "grade": 5,
+    "prerequisites": ["geometry_basic", "multiplication_multidigit"],
+    "description": "Understand volume as an attribute of solid figures. Measure volume by counting unit cubes."
+  },
+  "coordinate_plane": {
+    "name": "Coordinate Plane",
+    "domain": "algebra",
+    "grade": 5,
+    "prerequisites": ["number_comparison", "decimals_concept"],
+    "description": "Use a pair of perpendicular number lines to define a coordinate system."
+  },
+  "ratios": {
+    "name": "Ratios and Rates",
+    "domain": "arithmetic",
+    "grade": 6,
+    "prerequisites": ["fractions_multiplication", "decimals_operations"],
+    "description": "Understand ratio concepts and use ratio reasoning to solve problems."
+  },
+  "percentages": {
+    "name": "Percentages",
+    "domain": "arithmetic",
+    "grade": 6,
+    "prerequisites": ["ratios", "fractions_multiplication"],
+    "description": "Find a percent of a quantity. Solve problems involving percent of a whole."
+  },
+  "integers": {
+    "name": "Integers and Negative Numbers",
+    "domain": "arithmetic",
+    "grade": 6,
+    "prerequisites": ["number_comparison", "subtraction_multidigit"],
+    "description": "Understand positive and negative numbers as having direction and value."
+  },
+  "integer_operations": {
+    "name": "Integer Operations",
+    "domain": "arithmetic",
+    "grade": 6,
+    "prerequisites": ["integers", "multiplication_basic"],
+    "description": "Apply and extend understanding of arithmetic to add, subtract, multiply, divide integers."
+  },
+  "expressions_basic": {
+    "name": "Algebraic Expressions",
+    "domain": "algebra",
+    "grade": 6,
+    "prerequisites": ["ratios", "integers"],
+    "description": "Write and evaluate numerical expressions with variables. Identify parts of an expression."
+  },
+  "equations_one_step": {
+    "name": "One-Step Equations",
+    "domain": "algebra",
+    "grade": 6,
+    "prerequisites": ["expressions_basic", "integer_operations"],
+    "description": "Solve one-step equations using properties of equality."
+  },
+  "statistics_basic": {
+    "name": "Statistics (Center and Spread)",
+    "domain": "statistics",
+    "grade": 6,
+    "prerequisites": ["decimals_operations", "fractions_multiplication"],
+    "description": "Recognize statistical questions. Understand center (mean, median, mode) and spread."
+  },
+  "proportions": {
+    "name": "Proportional Relationships",
+    "domain": "algebra",
+    "grade": 7,
+    "prerequisites": ["ratios", "equations_one_step"],
+    "description": "Decide whether two quantities are in a proportional relationship."
+  },
+  "equations_two_step": {
+    "name": "Two-Step Equations and Inequalities",
+    "domain": "algebra",
+    "grade": 7,
+    "prerequisites": ["equations_one_step", "integer_operations"],
+    "description": "Solve multi-step real-life problems with rational numbers. Solve two-step inequalities."
+  },
+  "geometry_angles": {
+    "name": "Geometry (Angles and Triangles)",
+    "domain": "geometry",
+    "grade": 7,
+    "prerequisites": ["geometry_basic", "equations_one_step"],
+    "description": "Solve problems involving angles, supplementary, complementary, vertical, adjacent."
+  },
+  "area_perimeter": {
+    "name": "Area, Perimeter, and Circumference",
+    "domain": "measurement",
+    "grade": 7,
+    "prerequisites": ["geometry_angles", "ratios"],
+    "description": "Solve real-world problems involving area and perimeter of 2D figures including circles."
+  },
+  "probability_basic": {
+    "name": "Probability (Basic)",
+    "domain": "statistics",
+    "grade": 7,
+    "prerequisites": ["statistics_basic", "fractions_multiplication"],
+    "description": "Understand probability as likelihood. Calculate probability of simple events."
+  },
+  "functions_intro": {
+    "name": "Functions (Introduction)",
+    "domain": "algebra",
+    "grade": 8,
+    "prerequisites": ["proportions", "coordinate_plane"],
+    "description": "Understand a function as a rule that assigns exactly one output to each input."
+  },
+  "linear_functions": {
+    "name": "Linear Functions",
+    "domain": "algebra",
+    "grade": 8,
+    "prerequisites": ["functions_intro", "equations_two_step"],
+    "description": "Compare properties of two linear functions. Interpret slope and y-intercept."
+  },
+  "systems_equations_basic": {
+    "name": "Systems of Equations (Introduction)",
+    "domain": "algebra",
+    "grade": 8,
+    "prerequisites": ["linear_functions"],
+    "description": "Analyze and solve pairs of simultaneous linear equations graphically and algebraically."
+  },
+  "pythagorean_theorem": {
+    "name": "Pythagorean Theorem",
+    "domain": "geometry",
+    "grade": 8,
+    "prerequisites": ["geometry_angles", "square_roots"],
+    "description": "Explain proof of the Pythagorean Theorem. Apply it to find unknown side lengths."
+  },
+  "square_roots": {
+    "name": "Square Roots and Cube Roots",
+    "domain": "arithmetic",
+    "grade": 8,
+    "prerequisites": ["multiplication_multidigit", "fractions_multiplication"],
+    "description": "Evaluate square roots of perfect squares and cube roots of perfect cubes."
+  },
+  "scientific_notation": {
+    "name": "Scientific Notation",
+    "domain": "arithmetic",
+    "grade": 8,
+    "prerequisites": ["place_value_advanced", "integer_operations", "decimals_operations"],
+    "description": "Express very large and very small numbers using scientific notation."
+  },
+  "statistics_bivariate": {
+    "name": "Statistics (Bivariate Data)",
+    "domain": "statistics",
+    "grade": 8,
+    "prerequisites": ["statistics_basic", "linear_functions", "coordinate_plane"],
+    "description": "Construct and interpret scatter plots. Fit a linear model to data."
+  },
+  "polynomials": {
+    "name": "Polynomials",
+    "domain": "algebra",
+    "grade": 9,
+    "prerequisites": ["linear_functions", "integer_operations"],
+    "description": "Perform operations with polynomials. Add, subtract, multiply, and divide polynomials."
+  },
+  "factoring": {
+    "name": "Factoring Polynomials",
+    "domain": "algebra",
+    "grade": 9,
+    "prerequisites": ["polynomials", "multiplication_multidigit"],
+    "description": "Factor polynomials including GCF, trinomials, and difference of squares."
+  },
+  "quadratic_equations": {
+    "name": "Quadratic Equations",
+    "domain": "algebra",
+    "grade": 9,
+    "prerequisites": ["factoring", "square_roots"],
+    "description": "Solve quadratic equations by factoring, completing the square, and the quadratic formula."
+  },
+  "quadratic_functions": {
+    "name": "Quadratic Functions",
+    "domain": "algebra",
+    "grade": 9,
+    "prerequisites": ["quadratic_equations", "functions_intro"],
+    "description": "Graph and interpret quadratic functions. Identify vertex, axis of symmetry, intercepts."
+  },
+  "systems_equations_advanced": {
+    "name": "Systems of Equations (Advanced)",
+    "domain": "algebra",
+    "grade": 9,
+    "prerequisites": ["systems_equations_basic", "quadratic_equations"],
+    "description": "Solve systems involving linear and nonlinear equations. Substitution and elimination."
+  },
+  "rational_expressions": {
+    "name": "Rational Expressions",
+    "domain": "algebra",
+    "grade": 10,
+    "prerequisites": ["factoring", "fractions_multiplication"],
+    "description": "Simplify, add, subtract, multiply, and divide rational expressions."
+  },
+  "radical_expressions": {
+    "name": "Radical Expressions",
+    "domain": "algebra",
+    "grade": 10,
+    "prerequisites": ["square_roots", "factoring"],
+    "description": "Simplify, add, subtract, multiply radical expressions. Rationalize denominators."
+  },
+  "exponential_functions": {
+    "name": "Exponential Functions",
+    "domain": "algebra",
+    "grade": 10,
+    "prerequisites": ["functions_intro", "integer_operations"],
+    "description": "Model with exponential functions. Understand growth and decay. Graph exponential functions."
+  },
+  "logarithms": {
+    "name": "Logarithms",
+    "domain": "algebra",
+    "grade": 10,
+    "prerequisites": ["exponential_functions"],
+    "description": "Understand logarithm as the inverse of exponentiation. Properties of logarithms."
+  },
+  "geometry_proofs": {
+    "name": "Geometry (Proofs and Congruence)",
+    "domain": "geometry",
+    "grade": 10,
+    "prerequisites": ["pythagorean_theorem", "geometry_angles"],
+    "description": "Prove geometric theorems. Understand congruence and similarity of triangles."
+  },
+  "trigonometry_basic": {
+    "name": "Trigonometry (Right Triangles)",
+    "domain": "geometry",
+    "grade": 10,
+    "prerequisites": ["geometry_proofs", "ratios", "square_roots"],
+    "description": "Define trigonometric ratios. Use sine, cosine, tangent to solve right triangles."
+  },
+  "trigonometric_functions": {
+    "name": "Trigonometric Functions",
+    "domain": "algebra",
+    "grade": 11,
+    "prerequisites": ["trigonometry_basic", "functions_intro", "coordinate_plane"],
+    "description": "Extend trigonometry to the unit circle. Graph and interpret trig functions."
+  },
+  "trigonometric_identities": {
+    "name": "Trigonometric Identities",
+    "domain": "algebra",
+    "grade": 11,
+    "prerequisites": ["trigonometric_functions"],
+    "description": "Prove and apply trigonometric identities including Pythagorean and angle addition formulas."
+  },
+  "statistics_advanced": {
+    "name": "Statistics (Inference and Distributions)",
+    "domain": "statistics",
+    "grade": 11,
+    "prerequisites": ["statistics_bivariate", "probability_basic"],
+    "description": "Normal distributions. Sampling distributions. Confidence intervals. Hypothesis testing."
+  },
+  "probability_advanced": {
+    "name": "Probability (Compound and Conditional)",
+    "domain": "statistics",
+    "grade": 11,
+    "prerequisites": ["probability_basic", "fractions_multiplication"],
+    "description": "Addition and multiplication rules. Conditional probability. Bayes theorem introduction."
+  },
+  "complex_numbers": {
+    "name": "Complex Numbers",
+    "domain": "algebra",
+    "grade": 11,
+    "prerequisites": ["quadratic_equations", "radical_expressions"],
+    "description": "Know there is a complex number i such that i²=-1. Add, subtract, multiply complex numbers."
+  },
+  "sequences_series": {
+    "name": "Sequences and Series",
+    "domain": "algebra",
+    "grade": 11,
+    "prerequisites": ["exponential_functions", "linear_functions"],
+    "description": "Arithmetic and geometric sequences. Finite and infinite geometric series. Sigma notation."
+  },
+  "limits": {
+    "name": "Limits (Introduction)",
+    "domain": "calculus",
+    "grade": 12,
+    "prerequisites": ["functions_intro", "rational_expressions", "sequences_series"],
+    "description": "Understand the concept of a limit. Calculate limits graphically, numerically, algebraically."
+  },
+  "derivatives": {
+    "name": "Derivatives",
+    "domain": "calculus",
+    "grade": 12,
+    "prerequisites": ["limits", "trigonometric_functions", "exponential_functions"],
+    "description": "Understand the derivative as a rate of change. Differentiation rules including chain rule."
+  },
+  "derivative_applications": {
+    "name": "Derivative Applications",
+    "domain": "calculus",
+    "grade": 12,
+    "prerequisites": ["derivatives"],
+    "description": "Use derivatives to find extrema, concavity, related rates, and optimization."
+  },
+  "integrals": {
+    "name": "Integrals",
+    "domain": "calculus",
+    "grade": 12,
+    "prerequisites": ["derivatives"],
+    "description": "Understand the integral as accumulated change. Fundamental Theorem of Calculus. Basic techniques."
+  },
+  "integral_applications": {
+    "name": "Integral Applications",
+    "domain": "calculus",
+    "grade": 12,
+    "prerequisites": ["integrals"],
+    "description": "Use integrals to find area, volume, and solve real-world accumulation problems."
+  }
+}
