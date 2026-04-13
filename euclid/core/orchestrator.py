@@ -104,10 +104,17 @@ class Orchestrator:
         from euclid.agents.assessor import _generate_problem
         problem = _generate_problem(concept)
 
-        resolved = self.socrates.practice(concept, problem)
+        # FIXED: Loop prevents premature shutdown during escalation/hints
+        resolved = False
+        while not resolved:
+            resolved = self.socrates.practice(concept, problem)
 
-        if resolved:
-            self.verifier.verify(concept, problem)
+            if resolved:
+                self.verifier.verify(concept, problem)
+            else:
+                # Socrates returned False (escalation triggered). 
+                # The loop restarts to wait for user input!
+                pass 
 
     def run_explain(self, query: str) -> None:
         """

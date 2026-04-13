@@ -117,7 +117,12 @@ class StateManager:
             student_id=self.student.id, concept_id=concept_id
         ).first()
         if not record:
-            record = ConceptRecord(student_id=self.student.id, concept_id=concept_id)
+            record = ConceptRecord(
+                student_id=self.student.id, 
+                concept_id=concept_id,
+                attempts=0,  # Explicitly set to 0
+                correct=0    # Explicitly set to 0
+            )
             self._session.add(record)
         record.attempts += 1
         if correct:

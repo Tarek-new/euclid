@@ -113,6 +113,24 @@ class KnowledgeGraph:
             "by_domain":      by_domain,
         }
 
+    def infer_prerequisites(self, concept_id: str, state_manager: StateManager) -> set[str]:
+        """
+        Backward inference — if a student masters concept X, they implicitly
+        know all prerequisites of X (recursively). Mark them as mastered.
+        Returns the set of newly inferred concept IDs.
+        """
+        inferred: set[str] = set()
+
+        def walk(cid: str) -> None:
+            for prereq_id in self.concepts[cid].prerequisites:
+                if state_manager.get_concept_state(prereq_id) != ConceptState.MASTERED:
+                    state_manager.set_concept_state(prereq_id, ConceptState.MASTERED)
+                    inferred.add(prereq_id)
+                walk(prereq_id)
+
+        walk(concept_id)
+        return inferred
+
     def suggest_next(self, mastered: set[str], state_manager: StateManager) -> Concept | None:
         """
         From the frontier, pick the concept with the lowest grade level
