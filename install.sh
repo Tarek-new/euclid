@@ -2,7 +2,6 @@
 set -euo pipefail
 
 REPO="https://github.com/Tarek-new/euclid"
-PYPI="euclid-tutor"
 MIN_PYTHON="3.10"
 INSTALL_DIR="$HOME/.euclid"
 
@@ -47,17 +46,12 @@ success "pip found"
 # ── install ────────────────────────────────────────────────────────────────────
 info "Installing euclid..."
 
-if $PYTHON -m pip install --quiet --upgrade "$PYPI" 2>/dev/null; then
-    success "Installed from PyPI"
-else
-    info "PyPI not available. Installing from source..."
-    command -v git &>/dev/null || die "git is required for source install"
-    TMP=$(mktemp -d)
-    trap 'rm -rf "$TMP"' EXIT
-    git clone --quiet --depth 1 "$REPO" "$TMP/euclid"
-    $PYTHON -m pip install --quiet "$TMP/euclid"
-    success "Installed from source"
-fi
+command -v git &>/dev/null || die "git is required. Install from https://git-scm.com"
+TMP=$(mktemp -d)
+trap 'rm -rf "$TMP"' EXIT
+git clone --quiet --depth 1 "$REPO" "$TMP/euclid"
+$PYTHON -m pip install --quiet "$TMP/euclid"
+success "Installed from source"
 
 # ── shell config ───────────────────────────────────────────────────────────────
 info "Configuring shell..."

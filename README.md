@@ -12,22 +12,11 @@
 
 ### Installation
 
-**macOS / Linux:**
-
 ```bash
-curl -fsSL https://euclid.is/install | bash
-```
-
-**Windows (PowerShell):**
-
-```powershell
-irm https://euclid.is/install.ps1 | iex
-```
-
-**From PyPI:**
-
-```bash
-pip install euclid-tutor
+git clone https://github.com/Tarek-new/euclid.git
+cd euclid
+pip install -e .
+euclid setup
 ```
 
 Supports Anthropic, OpenAI, and Ollama (fully offline). Run `euclid setup` to configure.
@@ -148,7 +137,7 @@ ALEKS charges $50 per student per year to do three things: find out what a stude
 ### Contributing
 
 ```bash
-git clone https://github.com/your-username/euclid.git
+git clone https://github.com/Tarek-new/euclid.git
 cd euclid
 pip install -e ".[dev]"
 pytest
