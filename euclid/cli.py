@@ -9,8 +9,8 @@ from rich.panel import Panel
 from euclid import __version__
 
 
-app     = Console()
-cli     = typer.Typer(
+console = Console()
+app     = typer.Typer(
     name="euclid",
     help="The open source AI math tutor.",
     add_completion=False,
@@ -24,7 +24,7 @@ def _get(student: str):
 
 
 def _banner() -> None:
-    app.print(
+    console.print(
         Panel.fit(
             f"[bold]euclid[/bold]  [dim]v{__version__}[/dim]\n"
             "[dim]The open source AI math tutor.[/dim]",
@@ -33,7 +33,7 @@ def _banner() -> None:
     )
 
 
-@cli.command()
+@app.command()
 def assess(
     topic:   Optional[str] = typer.Argument(None, help="Topic or concept to assess. Omit for full placement."),
     student: str            = typer.Option("default", "--student", "-s", help="Student profile name."),
@@ -55,7 +55,7 @@ def assess(
         o.close()
 
 
-@cli.command()
+@app.command()
 def practice(
     topic:   Optional[str] = typer.Argument(None, help="Topic to practice. Omit to use suggested next concept."),
     student: str            = typer.Option("default", "--student", "-s", help="Student profile name."),
@@ -77,7 +77,7 @@ def practice(
         o.close()
 
 
-@cli.command()
+@app.command()
 def explain(
     topic:   str = typer.Argument(..., help="Concept to explain from first principles."),
     student: str = typer.Option("default", "--student", "-s", help="Student profile name."),
@@ -98,7 +98,7 @@ def explain(
         o.close()
 
 
-@cli.command()
+@app.command()
 def progress(
     student: str = typer.Option("default", "--student", "-s", help="Student profile name."),
 ) -> None:
@@ -118,7 +118,7 @@ def progress(
         o.close()
 
 
-@cli.command()
+@app.command()
 def next(
     student: str = typer.Option("default", "--student", "-s", help="Student profile name."),
 ) -> None:
@@ -138,7 +138,7 @@ def next(
         o.close()
 
 
-@cli.command()
+@app.command()
 def path(
     topic:   str = typer.Argument(..., help="Target concept to reach."),
     student: str = typer.Option("default", "--student", "-s", help="Student profile name."),
@@ -159,7 +159,7 @@ def path(
         o.close()
 
 
-@cli.command()
+@app.command()
 def audit(
     domain:  Optional[str] = typer.Argument(None, help="Domain to audit. Omit to audit everything."),
     student: str            = typer.Option("default", "--student", "-s", help="Student profile name."),
@@ -181,7 +181,7 @@ def audit(
         o.close()
 
 
-@cli.command()
+@app.command()
 def setup() -> None:
     """
     Configure your LLM provider and API key.
@@ -194,7 +194,7 @@ def setup() -> None:
     """
     from rich.prompt import Prompt
 
-    app.print("\n[bold]Setup[/bold] — configure your LLM provider\n")
+    console.print("\n[bold]Setup[/bold] — configure your LLM provider\n")
 
     provider = Prompt.ask(
         "Provider",
@@ -203,7 +203,7 @@ def setup() -> None:
     )
 
     if provider == "ollama":
-        app.print(
+        console.print(
             "\n[dim]Ollama runs fully offline. "
             "Make sure Ollama is running: [bold]ollama serve[/bold][/dim]\n"
         )
@@ -217,21 +217,21 @@ def setup() -> None:
     env_file.parent.mkdir(exist_ok=True)
     env_file.write_text(f"{env_var}={key}\n")
 
-    app.print(f"\n[green]Saved[/green] → {env_file}\n")
-    app.print(f"[dim]Add to your shell: [bold]export {env_var}=$(cat {env_file})[/bold][/dim]\n")
+    console.print(f"\n[green]Saved[/green] → {env_file}\n")
+    console.print(f"[dim]Add to your shell: [bold]export {env_var}=$(cat {env_file})[/bold][/dim]\n")
 
 
-@cli.command()
+@app.command()
 def version() -> None:
     """Print version."""
-    app.print(f"euclid v{__version__}")
+    console.print(f"euclid v{__version__}")
 
 
 def main() -> None:
     from dotenv import load_dotenv
     from pathlib import Path
     load_dotenv(Path.home() / ".euclid" / ".env")
-    cli()
+    app()
 
 
 if __name__ == "__main__":
