@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1117;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1d2e;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- outer bg -->
+  <rect width="900" height="520" fill="url(#bg)" rx="0"/>
+
+  <!-- terminal window -->
+  <rect x="60" y="40" width="780" height="440" rx="12" fill="#1e1e2e" filter="url(#shadow)"/>
+
+  <!-- title bar -->
+  <rect x="60" y="40" width="780" height="40" rx="12" fill="#2a2a3d"/>
+  <rect x="60" y="60" width="780" height="20" fill="#2a2a3d"/>
+
+  <!-- traffic lights -->
+  <circle cx="100" cy="60" r="7" fill="#ff5f57"/>
+  <circle cx="122" cy="60" r="7" fill="#febc2e"/>
+  <circle cx="144" cy="60" r="7" fill="#28c840"/>
+
+  <!-- title -->
+  <text x="450" y="65" font-family="SF Mono, Monaco, monospace" font-size="13" fill="#6e6e8a" text-anchor="middle">euclid — the open source AI math tutor</text>
+
+  <!-- terminal content -->
+
+  <!-- banner box -->
+  <rect x="90" y="100" width="300" height="52" rx="6" fill="none" stroke="#22d3ee" stroke-width="1" opacity="0.6"/>
+  <text x="108" y="122" font-family="SF Mono, Monaco, monospace" font-size="14" fill="#ffffff" font-weight="bold">euclid</text>
+  <text x="160" y="122" font-family="SF Mono, Monaco, monospace" font-size="13" fill="#6e6e8a">  v0.1.0</text>
+  <text x="108" y="141" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#6e6e8a">The open source AI math tutor.</text>
+
+  <!-- command 1 -->
+  <text x="90" y="182" font-family="SF Mono, Monaco, monospace" font-size="13" fill="#6e6e8a">$</text>
+  <text x="106" y="182" font-family="SF Mono, Monaco, monospace" font-size="13" fill="#22d3ee"> euclid assess</text>
+
+  <!-- output 1 -->
+  <text x="90" y="204" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#ffffff" font-weight="bold">Placement assessment</text>
+  <text x="300" y="204" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#6e6e8a"> — testing 8 concepts to find your level.</text>
+
+  <text x="90" y="224" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#22d3ee">Assessing: </text>
+  <text x="185" y="224" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#ffffff">Fraction Addition and Subtraction</text>
+
+  <text x="90" y="244" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#e2e8f0">A recipe calls for 2/3 cup of flour and 3/4 cup of sugar.</text>
+  <text x="90" y="260" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#e2e8f0">How much more sugar than flour is needed?</text>
+
+  <text x="90" y="282" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#f59e0b">Your answer</text>
+  <text x="190" y="282" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#6e6e8a"> › </text>
+  <text x="210" y="282" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#ffffff">1/12</text>
+
+  <text x="90" y="304" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#22c55e" font-weight="bold">✓ Mastered: </text>
+  <text x="192" y="304" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#ffffff">Fraction Addition and Subtraction</text>
+  <text x="90" y="320" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#6e6e8a">Unlocks → Fraction Multiplication and Division, Decimals</text>
+
+  <!-- divider -->
+  <line x1="90" y1="338" x2="810" y2="338" stroke="#2a2a3d" stroke-width="1"/>
+
+  <!-- command 2 -->
+  <text x="90" y="360" font-family="SF Mono, Monaco, monospace" font-size="13" fill="#6e6e8a">$</text>
+  <text x="106" y="360" font-family="SF Mono, Monaco, monospace" font-size="13" fill="#22d3ee"> euclid progress</text>
+
+  <!-- progress output -->
+  <text x="90" y="382" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#ffffff" font-weight="bold">Progress</text>
+  <text x="164" y="382" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#6e6e8a"> — 14/60 concepts mastered (23.3%)</text>
+
+  <!-- domain bars -->
+  <text x="90" y="404" font-family="SF Mono, Monaco, monospace" font-size="11" fill="#6e6e8a">arithmetic </text>
+  <text x="194" y="404" font-family="SF Mono, Monaco, monospace" font-size="11" fill="#22d3ee">██████████░░░░░░░░░░</text>
+  <text x="560" y="404" font-family="SF Mono, Monaco, monospace" font-size="11" fill="#6e6e8a"> 10/20</text>
+
+  <text x="90" y="422" font-family="SF Mono, Monaco, monospace" font-size="11" fill="#6e6e8a">algebra    </text>
+  <text x="194" y="422" font-family="SF Mono, Monaco, monospace" font-size="11" fill="#22d3ee">████░░░░░░░░░░░░░░░░</text>
+  <text x="560" y="422" font-family="SF Mono, Monaco, monospace" font-size="11" fill="#6e6e8a">  4/18</text>
+
+  <text x="90" y="440" font-family="SF Mono, Monaco, monospace" font-size="11" fill="#6e6e8a">geometry   </text>
+  <text x="194" y="440" font-family="SF Mono, Monaco, monospace" font-size="11" fill="#22d3ee">░░░░░░░░░░░░░░░░░░░░</text>
+  <text x="560" y="440" font-family="SF Mono, Monaco, monospace" font-size="11" fill="#6e6e8a">  0/10</text>
+
+  <!-- cursor blink -->
+  <rect x="90" y="458" width="8" height="14" fill="#22d3ee" opacity="0.9" rx="1"/>
+</svg>

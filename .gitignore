@@ -57,7 +57,5 @@ htmlcov/
 .DS_Store
 Thumbs.db
 
-# Assets (add your own hero image, don't commit large binaries)
-assets/*.png
-assets/*.jpg
+# Assets (large binaries only)
 assets/*.gif

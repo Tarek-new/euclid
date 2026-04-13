@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/hero.png" alt="Euclid CLI" width="800" />
+  <img src="assets/hero.svg" alt="Euclid CLI" width="800" />
 </p>
 <p align="center">The open source AI math tutor.</p>
 <p align="center">
