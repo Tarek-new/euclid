@@ -22,7 +22,7 @@ dependencies = [
 ]
 
 [project.scripts]
-euclid = "euclid.cli:app"
+euclid = "euclid.cli:main"
 
 [project.optional-dependencies]
 dev = [
